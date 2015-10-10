@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Linear Regression on Mtcars dataset</title>
+  <meta name="description" content="">
+  <meta name="author" content="Chris Eagle">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='' data-state='' id='slide-1'>
+  <h2>Interactive Linear Regression</h2>
+  <p>Coursera Data Products Project Application</br>
+Chris Eagle</p>
+
+</section>
+<section class='' data-state='' id='slide-2'>
+  <h3>Abstract</h3>
+  <p>The purpose of the application is to provide the user with a fun
+way to explore linear regression.</br></br>
+R&#39;s &quot;Mtcars&quot; dataset contains a series of variables relating to motor cars that can be plotted to explore correlation, with a linear regression model fitted to the points.</br></br>
+The user can change the slope and intercept of the regression line, adjusting to find the best fit. With each adjustment to the line, the mean squared error is calculated,</br> to show how good the fit is.</br>S/he can then reveal the actual line of best fit produced by the fitted linear model.</p>
+
+</section>
+<section class='' data-state='' id='slide-3'>
+  <h3>Inputs 1: Plot variables</h3>
+  <p>The user can choose any of the variables from the &#39;mtcars&#39; dataset from two drop-down menus. The plot then updates to display these variables, with a description of each variable under the plot.
+For example, when selecting &#39;mpg&#39; and &#39;wt&#39;:</br>
+<img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+</section>
+<section class='' data-state='' id='slide-4'>
+  <h3>Inputs 2: Slope and Intercept</h3>
+  <p>The user can then adjust two slider inputs - one for the slope, one for the intercept of a line drawn through the point on the plot. The min and max values on the sliders adjust dynamically based on the range of values for the variable in question.</br>
+<img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+</section>
+<section class='' data-state='' id='slide-5'>
+  <h3>Accuracy: Mean Squared Error</h3>
+  <p>As the user adjusts the slope and intercept of the line of fit, the mean squared error for the line is calculated and displayed. The user can then see whether subsequent adjustments lead to a more or less accurate fit.</br>
+<img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> 
+</br>The mean squared error of our example line is:</br></p>
+
+<pre><code>## [1] 36.28551
+</code></pre>
+
+</section>
+<section class='' data-state='' id='slide-6'>
+  <h3>Solution</h3>
+  <p>Finally, when the user has come up with his/her best approximation of the fit, the line of best fit can be revealed by checking the &#39;Show Solution&#39; checkbox. The line of best fit is plotted on the graph in red.</br>
+<img src="assets/fig/unnamed-chunk-5-1.png" alt="plot of chunk unnamed-chunk-5"> </p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
